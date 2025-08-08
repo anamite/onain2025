@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 25%, #FFD700 50%, #32CD32 75%, #228B22 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Decorations */
+.bg-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-flower {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #FF69B4, #FFB6C1);
+    border-radius: 50% 10% 50% 10%;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.flower-1 {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.flower-2 {
+    top: 20%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.flower-3 {
+    bottom: 30%;
+    left: 8%;
+    animation-delay: 4s;
+}
+
+.flower-4 {
+    bottom: 15%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+.banana-leaf {
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(45deg, #228B22, #32CD32, #90EE90);
+    border-radius: 100px 20px 100px 20px;
+    opacity: 0.2;
+}
+
+.left-leaf {
+    top: 10%;
+    left: -100px;
+    transform: rotate(-15deg);
+}
+
+.right-leaf {
+    bottom: 10%;
+    right: -100px;
+    transform: rotate(15deg);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.main-title {
+    margin-bottom: 1rem;
+}
+
+.indulge-text {
+    display: block;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 600;
+    color: #D2691E;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+
+.onam-text {
+    display: block;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    background: linear-gradient(45deg, #228B22, #32CD32, #FFD700, #FF6347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: #8B4513;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    to {
+        text-shadow: 2px 2px 8px rgba(255,215,0,0.5);
+    }
+}
+
+/* Main Content */
+.main-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 3px solid #FFD700;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.mahabali-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.mahabali-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.mahabali-image:hover {
+    transform: scale(1.05);
+}
+
+.event-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.date-time {
+    background: linear-gradient(135deg, #FFD700, #FF6347);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.event-date {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.event-time, .venue {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #8B4513;
+    font-weight: 600;
+}
+
+.ticket-info {
+    background: linear-gradient(135deg, #98FB98, #90EE90);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid #32CD32;
+}
+
+.included-title {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: #228B22;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.included-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.included-list li {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #006400;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid #FFD700;
+}
+
+.availability-notice {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 69, 0, 0.1);
+    border-radius: 10px;
+    border: 2px dashed #FF4500;
+}
+
+.seats-limited {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 700;
+    color: #FF4500;
+    margin-bottom: 0.5rem;
+}
+
+.grab-tickets {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+    color: #8B4513;
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    position: relative;
+}
+
+.ticket-btn {
+    background: linear-gradient(135deg, #FF6347, #FF4500, #FFD700);
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 15px 30px rgba(255, 99, 71, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 99, 71, 0.6);
+}
+
+.ticket-btn:active {
+    transform: translateY(-2px);
+}
+
+.btn-text {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.btn-subtext {
+    display: block;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.limited-seats-badge {
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #DC143C;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(50%) scale(1);
+    }
+    50% {
+        transform: translateX(50%) scale(1.05);
+    }
+    100% {
+        transform: translateX(50%) scale(1);
+    }
+}
+
+/* Organizers Section */
+.organizers-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+}
+
+.section-content {
+    text-align: center;
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.clubs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.club-logo {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #FFD700;
+}
+
+.club-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.club-image {
+    max-width: 120px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sponsors Section */
+.sponsors-section {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border: 2px solid rgba(34, 139, 34, 0.3);
+}
+
+.sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-items: center;
+}
+
+.sponsor-logo {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(34, 139, 34, 0.2);
+    width: 100%;
+    max-width: 180px;
+}
+
+.sponsor-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.sponsor-image {
+    max-width: 100%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sponsors-note {
+    text-align: center;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #228B22;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: rgba(139, 69, 19, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.kerala-elements {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.kerala-elements span {
+    margin: 0 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.kerala-elements span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.kerala-elements span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.footer-text {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: #8B4513;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.onam-wishes {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #228B22;
+    font-weight: 700;
+}
+
+/* Desktop/Laptop Specific Styles */
+@media (min-width: 1024px) {
+    .hero-section {
+        align-items: flex-start;
+    }
+    
+    .mahabali-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 1rem;
+    }
+    
+    .mahabali-image {
+        max-width: 450px;
+        width: 100%;
+    }
+    
+    .event-details {
+        flex: 1;
+        padding-left: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        padding: 1.5rem;
+    }
+    
+    .header {
+        padding: 1.5rem 0;
+    }
+    
+    .date-time, .ticket-info {
+        padding: 1rem;
+    }
+    
+    .ticket-btn {
+        padding: 1.2rem 2rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .banana-leaf {
+        display: none;
+    }
+    
+    .floating-flower {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .clubs-container {
+        gap: 2rem;
+    }
+    
+    .sponsors-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .organizers-section, .sponsors-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .included-list li {
+        font-size: 0.9rem;
+    }
+    
+    .kerala-elements {
+        font-size: 2rem;
+    }
+    
+    .kerala-elements span {
+        margin: 0 0.5rem;
+    }
+    
+    .clubs-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .sponsors-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .organizers-section, .sponsors-section {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .floating-flower,
+    .banana-leaf {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .container {
+        box-shadow: none;
+    }
+}

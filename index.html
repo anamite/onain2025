@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN-Onam 2025 - Celebrating Onam in Ingolstadt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-decorations">
+        <div class="floating-flower flower-1"></div>
+        <div class="floating-flower flower-2"></div>
+        <div class="floating-flower flower-3"></div>
+        <div class="floating-flower flower-4"></div>
+        <div class="banana-leaf left-leaf"></div>
+        <div class="banana-leaf right-leaf"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="indulge-text">INDULGE IN OUR DELICIOUS</span>
+                    <span class="onam-text">In-Onam</span>
+                </h1>
+                <p class="subtitle">Celebrating Onam in Ingolstadt</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero-section">
+                <!-- Mahabali Image -->
+                <div class="mahabali-container">
+                    <img src="mahabali.jpeg" alt="King Mahabali with Sadya" class="mahabali-image" id="mahabali-img">
+                </div>
+
+                <!-- Event Details -->
+                <div class="event-details">
+                    <div class="date-time">
+                        <h2 class="event-date">14th September 2025</h2>
+                        <p class="event-time">Timings: 11:00 AM onwards</p>
+                        <p class="venue">Kultur Zentrum Neun Ingolstadt</p>
+                    </div>
+
+                    <div class="ticket-info">
+                        <h3 class="included-title">What's Included in Your Ticket:</h3>
+                        <ul class="included-list">
+                            <li>🍛 Unlimited Sadya - Taste of Kerala</li>
+                            <li>🎵 Kerala Events and Traditional Music</li>
+                            <li>🎮 Unlimited Fun and Games</li>
+                            <li>🎭 Cultural Performances</li>
+                        </ul>
+                        
+                        <div class="availability-notice">
+                            <p class="seats-limited">⚠️ Seats are Limited - Food is NOT!</p>
+                            <p class="grab-tickets">Grab Your Tickets Now!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <button class="ticket-btn" id="ticketBtn">
+                    <span class="btn-text">🎫 GET YOUR TICKETS</span>
+                    <span class="btn-subtext">Early Bird Booking Available</span>
+                </button>
+                
+                <div class="limited-seats-badge">
+                    <span>Limited Seats Available!</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Making it Happen By Section -->
+        <section class="organizers-section">
+            <div class="section-content">
+                <h2 class="section-title">Making it happen by:</h2>
+                <div class="clubs-container">
+                    <div class="club-logo">
+                        <img src="club1.png" alt="Club 1" class="club-image">
+                    </div>
+                    <div class="club-logo">
+                        <img src="club2.png" alt="Club 2" class="club-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsors Section -->
+        <section class="sponsors-section">
+            <div class="section-content">
+                <h2 class="section-title">Our Sponsors</h2>
+                <div class="sponsors-container">
+                    <div class="sponsor-logo">
+                        <img src="sponsor1.png" alt="Sponsor 1" class="sponsor-image">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="sponsor2.png" alt="Sponsor 2" class="sponsor-image">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="sponsor3.png" alt="Sponsor 3" class="sponsor-image">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="sponsor4.png" alt="Sponsor 4" class="sponsor-image">
+                    </div>
+                </div>
+                <p class="sponsors-note">Thank you to our amazing sponsors for making In-Onam 2025 possible!</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="kerala-elements">
+                    <span class="coconut">🥥</span>
+                    <span class="boat">⛵</span>
+                    <span class="elephant">🐘</span>
+                </div>
+                <p class="footer-text">Experience the authentic taste of Kerala in Germany</p>
+                <p class="onam-wishes">Happy Onam 2025! 🌺</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Load the provided image - fallback to placeholder if not found
+        document.addEventListener('DOMContentLoaded', function() {
+            const img = document.getElementById('mahabali-img');
+            
+            // Check if mahabali.png exists, otherwise use placeholder
+            img.onerror = function() {
+                this.src = 'data:image/svg+xml;base64,' + btoa(`
+                    <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#FFE4B5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#bg)"/>
+                        <text x="50%" y="45%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="24" fill="#8B4513">King Mahabali</text>
+                        <text x="50%" y="55%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="16" fill="#8B4513">with Kerala Sadya</text>
+                    </svg>
+                `);
+            };
+            
+            // Button click handler (will be updated with actual link)
+            document.getElementById('ticketBtn').addEventListener('click', function() {
+                alert('Ticket shop link will be provided. Early bird booking available!');
+            });
+
+            // Add error handlers for club and sponsor images
+            const clubImages = document.querySelectorAll('.club-image');
+            clubImages.forEach((img, index) => {
+                img.onerror = function() {
+                    this.src = 'data:image/svg+xml;base64,' + btoa(`
+                        <svg width="120" height="80" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0" stroke="#ddd" stroke-width="2"/>
+                            <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="12" fill="#666">Club ${index + 1}</text>
+                        </svg>
+                    `);
+                };
+            });
+
+            const sponsorImages = document.querySelectorAll('.sponsor-image');
+            sponsorImages.forEach((img, index) => {
+                img.onerror = function() {
+                    this.src = 'data:image/svg+xml;base64,' + btoa(`
+                        <svg width="150" height="80" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f8f8f8" stroke="#ddd" stroke-width="2"/>
+                            <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="12" fill="#666">Sponsor ${index + 1}</text>
+                        </svg>
+                    `);
+                };
+            });
+        });
+
+        // Floating animations
+        function createFloatingAnimation() {
+            const flowers = document.querySelectorAll('.floating-flower');
+            flowers.forEach((flower, index) => {
+                flower.style.animationDelay = `${index * 2}s`;
+            });
+        }
+
+        createFloatingAnimation();
+    </script>
+</body>
+</html>
