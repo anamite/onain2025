@@ -390,6 +390,14 @@ body {
     margin: 0 auto;
 }
 
+.club-description {
+    font-size: 0.9rem;
+    color: #B8E6B8;
+    margin-top: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
 /* Sponsors Section */
 .sponsors-section {
     background: rgba(40, 90, 70, 0.8);
@@ -444,43 +452,33 @@ body {
 
 /* Footer */
 .footer {
-    background: rgba(27, 67, 50, 0.6);
-    backdrop-filter: blur(5px);
+    background-image: url('kerala.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     border-radius: 20px;
     padding: 2rem;
     margin-top: 3rem;
     text-align: center;
     border: 2px solid rgba(45, 90, 61, 0.5);
+    overflow: hidden;
 }
 
-.kerala-elements {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 1rem;
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(27, 67, 50, 0.5);
+    z-index: 1;
 }
 
-.kerala-elements span {
-    margin: 0 1rem;
-    animation: bounce 2s ease-in-out infinite;
-}
-
-.kerala-elements span:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.kerala-elements span:nth-child(3) {
-    animation-delay: 1s;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+.footer-content {
+    position: relative;
+    z-index: 2;
 }
 
 .footer-text {
@@ -583,14 +581,6 @@ body {
     
     .included-list li {
         font-size: 0.9rem;
-    }
-    
-    .kerala-elements {
-        font-size: 2rem;
-    }
-    
-    .kerala-elements span {
-        margin: 0 0.5rem;
     }
     
     .clubs-container {
