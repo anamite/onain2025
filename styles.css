@@ -382,10 +382,9 @@ body {
 }
 
 .club-image {
-    max-width: 120px;
-    max-height: 80px;
-    width: auto;
-    height: auto;
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
 }
@@ -461,7 +460,7 @@ body {
     padding: 2rem;
     margin-top: 3rem;
     text-align: center;
-    border: 2px solid rgba(45, 90, 61, 0.8);
+    border: 2px solid rgba(45, 90, 61, 0.9);
     overflow: hidden;
 }
 
@@ -472,7 +471,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(27, 67, 50, 0.8);
+    background: rgba(27, 67, 50, 0.9);
     z-index: 1;
 }
 
