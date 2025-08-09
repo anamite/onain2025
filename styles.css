@@ -215,7 +215,7 @@ body {
 
 .venue a {
     color: #B8D4C2;
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s ease;
 }
 
@@ -225,7 +225,7 @@ body {
 }
 
 .venue a:visited {
-    color: white;
+    color: #B8D4C2;
 }
 
 .ticket-info {
