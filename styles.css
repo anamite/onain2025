@@ -213,6 +213,21 @@ body {
     font-weight: 600;
 }
 
+.venue a {
+    color: #B8D4C2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.venue a:hover {
+    color: #90EE90;
+    text-decoration: underline;
+}
+
+.venue a:visited {
+    color: white;
+}
+
 .ticket-info {
     background: linear-gradient(135deg, #3A6B4A, #52806A);
     padding: 1.5rem;
