@@ -340,7 +340,7 @@ body {
 
 .limited-seats-badge {
     position: absolute;
-    top: -20px;
+    top: -45px;
     right: 50%;
     transform: translateX(50%);
     background: #DC143C;
