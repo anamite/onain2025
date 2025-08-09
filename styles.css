@@ -228,6 +228,19 @@ body {
     color: #B8D4C2;
 }
 
+.maps-icon {
+    width: 17px;
+    height: 25px;
+    margin-right: 8px;
+    vertical-align: middle;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.venue a:hover .maps-icon {
+    filter: brightness(1.2);
+}
+
 .ticket-info {
     background: linear-gradient(135deg, #3A6B4A, #52806A);
     padding: 1.5rem;
