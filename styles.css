@@ -762,3 +762,19 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* Hyperlink Styles */
+a {
+    color: #87CEEB; /* Light blue color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6BB6FF; /* Slightly brighter on hover */
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #87CEEB; /* Keep same light blue for visited links */
+}
