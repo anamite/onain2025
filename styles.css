@@ -648,3 +648,117 @@ body {
         box-shadow: none;
     }
 }
+
+/* Onam Info Box Styles */
+.onam-info-box {
+    margin: 1.5rem 0;
+}
+
+.onam-learn-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.onam-learn-btn:hover {
+    opacity: 0.8;
+}
+
+.learn-icon {
+    font-size: 1.1rem;
+}
+
+.learn-text {
+    font-weight: 400;
+}
+
+.learn-arrow {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .onam-learn-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        gap: 0.4rem;
+    }
+    
+    .learn-icon {
+        font-size: 1rem;
+    }
+    
+    .learn-arrow {
+        font-size: 0.9rem;
+    }
+}
+
+/* Cultural Performance Button Styles */
+.cultural-performance-box {
+    margin: 1.5rem 0;
+}
+
+.cultural-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.cultural-btn:hover {
+    opacity: 0.8;
+}
+
+.cultural-icon {
+    font-size: 1.1rem;
+}
+
+.cultural-text {
+    font-weight: 400;
+}
+
+.cultural-arrow {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .cultural-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        gap: 0.4rem;
+    }
+    
+    .cultural-icon {
+        font-size: 1rem;
+    }
+    
+    .cultural-arrow {
+        font-size: 0.9rem;
+    }
+}
