@@ -34,6 +34,18 @@
             </div>
         </header> -->
 
+        <!-- Presenters Section -->
+        <section class="presenters-section">
+            <div class="section-content">
+                <div class="presenter-text">
+                    <h1 class="co-presenter">Mallus in Ingolstadt</h1>
+                    <p class="connector-text">together with</p>
+                    <h2 class="co-presenter">Indian Nomads in Ingolstadt e.V.</h2>
+                    <p class="presents-text">presents</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Main Content -->
         <main class="main-content">
             <div class="hero-section">
@@ -101,23 +113,53 @@
         </main>
 
         <!-- Making it Happen By Section -->
-        <section class="organizers-section">
+        <section class="sponsors-section">
             <div class="section-content">
-                <h2 class="section-title">Brought to you by:</h2>
-                <div class="clubs-container">
-                    <div class="club-logo">
-                        <p class="club-description"><br>the heart of</p>
-                        <img src="mallus.png" alt="Club 2" class="club-image">
+                <h2 class="section-title">Powered By:</h2>
+                <div class="sponsors-grid">
+
+                    <div class="sponsor-card" onclick="openSponsorLink('https://www.24halves.de/')">
+                        <div class="sponsor-image-container">
+                            <img src="sponsor1.png" alt="24Halves" class="sponsor-card-image">
+                        </div>
+                        <div class="sponsor-info">
+                            <h3 class="sponsor-name">24Halves</h3>
+                            <p class="sponsor-description">Finance, Taxes and much more at just one place</p>
+                            <div class="sponsor-location">
+                                <span class="location-icon">📍</span>
+                                <span>Augsburg, Bavaria</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="club-logo">
-                        <p class="club-description">in association with <br> the spirit of
-                        </p>
-                        <img src="nomad.png" alt="Club 2" class="club-image">
+                    <div class="sponsor-card" onclick="openSponsorLink('https://oota-regensburg.eatbu.com/?lang=en')">
+                        <div class="sponsor-image-container">
+                            <img src="oota.png" alt="Oota Regensburg" class="sponsor-card-image">
+                        </div>
+                        <div class="sponsor-info">
+                            <h3 class="sponsor-name">Oota Regensburg</h3>
+                            <p class="sponsor-description">Premium south Indian cuisine specialists delivering authentic flavors.</p>
+                            <div class="sponsor-location">
+                                <span class="location-icon">📍</span>
+                                <span>Regensburg, Germany</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="club-logo">
-                        <p class="club-description">& the delicious <br> Sadhya squad</p>
-                        <img src="oota.png" alt="Club 1" class="club-image">
+                    
+                    <!-- <div class="sponsor-card" onclick="openSponsorLink('https://www.indiannomads.de')">
+                        <div class="sponsor-image-container">
+                            <img src="nomad.png" alt="Indian Nomads e.V." class="sponsor-card-image">
+                        </div>
+                        <div class="sponsor-info">
+                            <h3 class="sponsor-name">Indian Nomads e.V.</h3>
+                            <p class="sponsor-description">A vibrant community organization promoting Indian culture, traditions, and fostering connections among the diaspora in Germany.</p>
+                            <div class="sponsor-location">
+                                <span class="location-icon">📍</span>
+                                <span>Ingolstadt, Germany</span>
+                            </div>
+                        </div>
                     </div>
+                     -->
+
                 </div>
             </div>
         </section>
@@ -154,6 +196,38 @@
         </footer>
     </div>
 
+    <!-- Performance Modal -->
+    <div id="performanceModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">🎭 Interested in Performing?</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-question">Are you also interested in performing something on our stage with 200+ audience?</p>
+                
+                <div class="performance-info">
+                    <h4>Allowed types of events:</h4>
+                    <ul class="performance-list">
+                        <li>🎵 Songs (solo or as a team)</li>
+                        <li>💃 Dances (solo or as a team)</li>
+                        <li>🎨 Performances that give our audience an authentic experience of Kerala</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn performance-btn" id="performanceYes">
+                    <span class="btn-icon">🌟</span>
+                    <span>Yes, I want to perform!</span>
+                </button>
+                <button class="modal-btn booking-btn" id="performanceNo">
+                    <span class="btn-icon">🎫</span>
+                    <span>No, take me to booking</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Load the provided image - fallback to placeholder if not found
         document.addEventListener('DOMContentLoaded', function() {
@@ -176,9 +250,51 @@
                 `);
             };
             
-            // Button click handler
+            // Button click handler - Show modal instead of direct redirect
             document.getElementById('ticketBtn').addEventListener('click', function() {
+                document.getElementById('performanceModal').style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+
+            // Modal functionality
+            const modal = document.getElementById('performanceModal');
+            const modalClose = document.getElementById('modalClose');
+            const performanceYes = document.getElementById('performanceYes');
+            const performanceNo = document.getElementById('performanceNo');
+
+            // Close modal function
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+
+            // Close modal on X button
+            modalClose.addEventListener('click', closeModal);
+
+            // Close modal on background click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Handle "Yes, I want to perform" button
+            performanceYes.addEventListener('click', function() {
+                window.open('https://oiqqnzia.formester.com/f/SSRjbqN4E', '_blank');
+                closeModal();
+            });
+
+            // Handle "No, take me to booking" button
+            performanceNo.addEventListener('click', function() {
                 window.open('https://hievents-production-5025.up.railway.app/event/1/inonam-2025?promo_code=early-bird', '_blank');
+                closeModal();
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
             });
 
             // Add error handlers for club and sponsor images
@@ -206,6 +322,11 @@
                 };
             });
         });
+
+        // Sponsor card click handler
+        function openSponsorLink(url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
 
         // Floating animations
         function createFloatingAnimation() {
