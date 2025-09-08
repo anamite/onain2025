@@ -248,36 +248,7 @@
     </div>
 
     <!-- Performance Modal -->
-    <div id="performanceModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">🎭 Interested in Performing?</h3>
-                <button class="modal-close" id="modalClose">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-question">Are you also interested in performing something on our stage with 200+ audience?</p>
-                
-                <div class="performance-info">
-                    <h4>Allowed types of events:</h4>
-                    <ul class="performance-list">
-                        <li>🎵 Songs (solo or as a team)</li>
-                        <li>💃 Dances (solo or as a team)</li>
-                        <li>🎨 Performances that give our audience an authentic experience of Kerala</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-btn performance-btn" id="performanceYes">
-                    <span class="btn-icon">🌟</span>
-                    <span>Yes, I want to perform!</span>
-                </button>
-                <button class="modal-btn booking-btn" id="performanceNo">
-                    <span class="btn-icon">🎫</span>
-                    <span>No, take me to booking</span>
-                </button>
-            </div>
-        </div>
-    </div>
+    <!-- The performance modal has been removed as per the request -->
 
     <script>
         // Load the provided image - fallback to placeholder if not found
@@ -301,51 +272,9 @@
                 `);
             };
             
-            // Button click handler - Show modal instead of direct redirect
+            // Button click handler - Directly redirect to ticket booking
             document.getElementById('ticketBtn').addEventListener('click', function() {
-                document.getElementById('performanceModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
-
-            // Modal functionality
-            const modal = document.getElementById('performanceModal');
-            const modalClose = document.getElementById('modalClose');
-            const performanceYes = document.getElementById('performanceYes');
-            const performanceNo = document.getElementById('performanceNo');
-
-            // Close modal function
-            function closeModal() {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-
-            // Close modal on X button
-            modalClose.addEventListener('click', closeModal);
-
-            // Close modal on background click
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-
-            // Handle "Yes, I want to perform" button
-            performanceYes.addEventListener('click', function() {
-                window.open('https://oiqqnzia.formester.com/f/SSRjbqN4E', '_blank');
-                closeModal();
-            });
-
-            // Handle "No, take me to booking" button
-            performanceNo.addEventListener('click', function() {
                 window.open('https://hievents-production-5025.up.railway.app/event/1/inonam-2025', '_blank');
-                closeModal();
-            });
-
-            // Close modal on Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modal.style.display === 'flex') {
-                    closeModal();
-                }
             });
 
             // Add error handlers for club and sponsor images
